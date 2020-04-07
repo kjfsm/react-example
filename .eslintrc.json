@@ -6,8 +6,7 @@
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
-        "react-app"
+        "plugin:@typescript-eslint/eslint-recommended"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -42,7 +41,9 @@
             "error",
             "always"
         ],
-        "react/prop-types": "off",
-        "no-unused-vars": "off"
+        "comma-dangle": [
+            "error",
+            "always-multiline"
+        ]
     }
 }
