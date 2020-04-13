@@ -19,13 +19,26 @@ const Todo = () => {
     setTasks(newTasks);
   };
 
+  const handleUpdate = (index: number) => (
+    title: string,
+    description: string,
+  ) => {
+    const newTasks = tasks.slice();
+    newTasks[index] = { title, description };
+    setTasks(newTasks);
+  };
+
   return (
     <>
       <div>
         <NewTask create={handleCreate} />
       </div>
       <div>
-        <Todos tasks={tasks} handleDelete={handleDelete} />
+        <Todos
+          tasks={tasks}
+          handleDelete={handleDelete}
+          handleUpdate={handleUpdate}
+        />
       </div>
     </>
   );

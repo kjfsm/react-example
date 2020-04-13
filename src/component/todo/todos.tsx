@@ -4,6 +4,7 @@ import Task, { TaskData } from "./task";
 interface TodosProps {
   tasks: TaskData[];
   handleDelete: (index: number) => () => void;
+  handleUpdate: any;
 }
 
 const Todos = (props: TodosProps) => (
@@ -11,7 +12,11 @@ const Todos = (props: TodosProps) => (
     {props.tasks.map((task, index) => {
       return (
         <div key={index}>
-          <Task task={task} Delete={props.handleDelete(index)} />
+          <Task
+            task={task}
+            Delete={props.handleDelete(index)}
+            Update={props.handleUpdate(index)}
+          />
         </div>
       );
     })}
