@@ -1,11 +1,11 @@
 import React from "react";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { Route, Switch, Link, HashRouter } from "react-router-dom";
 import Forms from "./component/forms/forms";
 import Twitter from "./component/twitter/twitter";
 import Todo from "./component/todo/todo";
 
 const App = () => (
-  <BrowserRouter>
+  <HashRouter>
     <div>
       <Link to="/">Home</Link>
     </div>
@@ -23,7 +23,7 @@ const App = () => (
       <Route path="/twitter" component={Twitter} />
       <Route path="/todo" component={Todo} />
     </Switch>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export default App;
