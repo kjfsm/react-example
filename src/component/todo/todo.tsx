@@ -4,9 +4,7 @@ import Todos from "./todos";
 import { TaskData } from "./task";
 
 const Todo = () => {
-  const [tasks, setTasks] = useState<TaskData[]>([
-    { title: "", description: "" },
-  ]);
+  const [tasks, setTasks] = useState<TaskData[]>([]);
 
   const handleCreate = (title: string, description: string) => {
     const newTasks = tasks.slice();

@@ -4,7 +4,7 @@ import Timeline from "./timeline";
 import { TweetData } from "./tweet";
 
 const Twitter = () => {
-  const [tweets, setTweets] = useState<TweetData[]>([{ name: "", text: "" }]);
+  const [tweets, setTweets] = useState<TweetData[]>([]);
   const [name, setName] = useState<string>("");
 
   const handleSend = (tweetText: string) => {
