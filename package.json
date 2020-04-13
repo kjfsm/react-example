@@ -1,5 +1,5 @@
 {
-  "homepage": "./",
+  "homepage": "https://kjfsm.github.io/react-example/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -16,11 +16,14 @@
     "react-scripts": "3.4.0",
     "typescript": "^3.7.5"
   },
+  "devDependencies": {
+    "eslint-config-prettier": "^6.10.1",
+    "gh-pages": "^2.2.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
